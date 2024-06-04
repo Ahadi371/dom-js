@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+     <header>
+        <h1>Welcome to my blog website</h1>
+     </header>
+     <main>
+        <section>
+            <article>
+                <h3>My Awesome Blog-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor doloribus excepturi architecto sunt molestias. Ducimus ex odit labore autem laudantium fuga illum, quia distinctio itaque, impedit, temporibus ipsum quo vitae?</p>
+            </article>
+            <article>
+                <h3 id="2nd-tital">My Awesome Blog-2</h3>
+                <p>Facere, at eos, obcaecati nemo modi iusto laboriosam quam ea, dolorem explicabo quibusdam pariatur ab ducimus voluptatem sed dolores non. Laudantium, natus optio recusandae fugiat vitae magni molestias facilis voluptatem.</p>
+            </article>
+            <article>
+                <h3 id="3d-tital">My Awesome Blog-3</h3>
+                <p>Doloremque sint ut temporibus numquam non ratione voluptatum, facere deserunt rem explicabo exercitationem, soluta natus et dolor provident autem, perferendis libero. Exercitationem omnis voluptatem modi non numquam perferendis maxime sint.</p>
+            </article>
+        </section>
+     </main>
+     <script>
+        const blogTitles = document.getElementsByTagName('p');
+        for (const p of blogTitles) {
+            // console.log(p.innerText);
+            
+        }
+
+        document.getElementById('2nd-tital').style.color = 'red';
+        const secondTital = document.getElementById('2nd-tital');
+        secondTital.style.textAlign ='center';
+        let third = document.getElementById('3d-tital');
+        third.innerText = 'Tital updated by js'
+        third.style.textAlign = 'center'
+        third.style.color = 'green'
+        third.style.backgroundColor = 'salmon'
+        third.style.padding = '10px'
+     </script>
+</body>
+</html>
