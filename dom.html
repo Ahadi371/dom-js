@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
 </head>
+
 <body>
-     <header>
+    <header>
         <h1>Welcome to my blog website</h1>
-     </header>
-     <main>
-        <section>
-            <article>
+    </header>
+    <main>
+        <section id="blogs" class="blogs">
+            <header>
+            <h3>Blog list</h3>
+            <ul id="blog-list">
+                <li>Blog-1</li>
+                <li>Blog-2</li>
+                <li>Blog-3</li>
+                <li>Blog-4</li>
+            </ul>
+            </header>
+            <article class="blog">
                 <h3>My Awesome Blog-1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor doloribus excepturi architecto sunt molestias. Ducimus ex odit labore autem laudantium fuga illum, quia distinctio itaque, impedit, temporibus ipsum quo vitae?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor doloribus excepturi architecto sunt
+                    molestias. Ducimus ex odit labore autem laudantium fuga illum, quia distinctio itaque, impedit,
+                    temporibus ipsum quo vitae?</p>
             </article>
-            <article>
+            <article class="blog">
                 <h3 id="2nd-tital">My Awesome Blog-2</h3>
-                <p>Facere, at eos, obcaecati nemo modi iusto laboriosam quam ea, dolorem explicabo quibusdam pariatur ab ducimus voluptatem sed dolores non. Laudantium, natus optio recusandae fugiat vitae magni molestias facilis voluptatem.</p>
+                <p>Facere, at eos, obcaecati nemo modi iusto laboriosam quam ea, dolorem explicabo quibusdam pariatur ab
+                    ducimus voluptatem sed dolores non. Laudantium, natus optio recusandae fugiat vitae magni molestias
+                    facilis voluptatem.</p>
             </article>
-            <article>
+            <article class="blog">
                 <h3 id="3d-tital">My Awesome Blog-3</h3>
-                <p>Doloremque sint ut temporibus numquam non ratione voluptatum, facere deserunt rem explicabo exercitationem, soluta natus et dolor provident autem, perferendis libero. Exercitationem omnis voluptatem modi non numquam perferendis maxime sint.</p>
+                <p>Doloremque sint ut temporibus numquam non ratione voluptatum, facere deserunt rem explicabo
+                    exercitationem, soluta natus et dolor provident autem, perferendis libero. Exercitationem omnis
+                    voluptatem modi non numquam perferendis maxime sint.</p>
             </article>
         </section>
-     </main>
-     <script>
+    </main>
+    <script>
         const blogTitles = document.getElementsByTagName('p');
         for (const p of blogTitles) {
             // console.log(p.innerText);
-            
+
         }
 
         document.getElementById('2nd-tital').style.color = 'red';
         const secondTital = document.getElementById('2nd-tital');
-        secondTital.style.textAlign ='center';
+        secondTital.style.textAlign = 'center';
         let third = document.getElementById('3d-tital');
         third.innerText = 'Tital updated by js'
         third.style.textAlign = 'center'
@@ -43,6 +60,59 @@
         third.style.backgroundColor = 'salmon'
         third.style.padding = '10px'
         third.style.fontSize = '10px'
-     </script>
+        //esplore class name
+        // let blogs = document.getElementsByClassName('blog');
+        // for (const blog of blogs) {
+
+        //     blog.style.border = '2px solid orange';
+        //     blog.style.borderRadius = '20px';
+        //     blog.style.margin = '5px'
+        //     blog.style.padding = '10px'
+        // }
+
+
+        //create and add element using js
+        const li = document.createElement('li')
+        li.innerText = 'Blog-5'
+        //were to
+        const ul = document.getElementById('blog-list');
+        //append new elemant
+        ul.appendChild(li);
+        //add article
+        const article = document.createElement('article');
+        article.classList.add('blog'); 
+        const h3 = document.createElement('h3');
+        h3.innerText = 'My Awesome Bloge';
+        const p = document.createElement('p');
+        p.innerText = "dolor sit amet consectetur adipisicing elit. Dolor doloribus excepturi architecto sunt molestias. Ducimus e"
+    
+    article.appendChild(h3);
+    article.appendChild(p);
+ const blogSection = document.getElementById('blogs');
+ blogSection.appendChild(article)
+    
+      //esplore class name
+      let blogs = document.getElementsByClassName('blog');
+        for (const blog of blogs) {
+
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '20px';
+            blog.style.margin = '5px'
+            blog.style.padding = '10px'
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
 </body>
+
 </html>
